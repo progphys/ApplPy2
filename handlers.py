@@ -245,7 +245,7 @@ async def check_progress(message: Message):
     calories_burned = GLOBAL_DATA.get("calories_burned", 0)
 
     water_remaining = max(water_goal - water_drank, 0)
-    calorie_balance = max(calorie_goal + food_ate - calories_burned, 0)
+    calorie_balance = max(calorie_goal - food_ate + calories_burned, 0)
 
     progress_message = (
         "📊 <b>Прогресс:</b>\n\n"
